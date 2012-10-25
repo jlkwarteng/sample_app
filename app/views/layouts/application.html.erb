@@ -1,14 +1,36 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
-  <title>SampleApp</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
+	<style>
+	html{
+		background: url('../body.jpg');
+	}
+	div{
+		width:80%;
+		margin:0 auto;
+	}
+	div#body{
+		background:#fff;
+		min-height:600px;
+		border:2px solid #ccc;
+	}
+	div#menu{
+		height:30px;
+		background:#333;
+		margin-bottom:10px;
+		border-radius:10px;
+	}
+	</style>
+	<title>Ruby on Rail Tutorial Sample App | <%= @title %></title>
+	<%= csrf_meta_tag %>
 </head>
 <body>
+	<div id='menu'>
+	</div>
+	<div id='body'>
+		
+		<%= yield %>
+	</body>
 
-<%= yield %>
 
-</body>
 </html>
