@@ -1,0 +1,100 @@
+body{
+	background:#ddd;
+}
+header nav{
+	margin:0 auto;
+	float:right;
+}
+header nav ul{
+	background:#080;
+	white-space: nowrap;
+	list-style:none;
+	margin:0;
+	padding:0;
+	
+}
+
+header a{
+	display:block;
+	padding:1em 2em;
+	text-align:center;
+	color: #ee0;
+}
+header nav ul li{
+	display:inline-block;	
+}
+.logo{
+	padding-left:10px;
+	padding-top:10px;
+	padding:0;
+	display:normal;
+	float:none;
+	position:absolute;
+
+	margin:0;
+}
+img.logo{
+	left:10px;
+	top:10px;
+}
+
+.signup_button{
+	font-size:150%;
+	padding:2% 3%;
+	background: #060;
+	margin:0 auto;
+	color:#fff;
+	text-decoration:none;
+}
+.signup_button:hover{
+	background: #080;
+	color:#010;
+}
+.clear{
+	clear:both;
+	margin:0;
+	padding:0;
+	display:inline
+}
+.round{
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+}
+#container{
+	width:910px;
+	margin:0 auto;
+	background:#fff;
+}
+section{
+	padding: 1em;
+	min-height:500px;
+}
+section h1{
+	display:block;
+	text-align: center;
+}
+#homecomtent{
+	text-align:center;
+}
+footer{
+	text-align:center;
+	padding:1%;
+	background: #345;
+	color:#fff;
+}
+footer nav ul{
+	white-space:nowrap;
+	list-style:none;
+	margin:0 auto;
+	padding:0;
+}
+footer nav ul a{
+	display:inline-block;
+	padding:.5em 1em;
+	color:#fff;
+}
+footer li{
+	display:inline;
+	
+}

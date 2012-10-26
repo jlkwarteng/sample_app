@@ -1,0 +1,16 @@
+<header>
+	
+	<nav>
+		<ul>
+			<li><%= link_to "HOME", root_path %>
+			<li><%= link_to "ABOUT", about_path %>
+			<li><%= link_to "CONTACT", contact_path %>
+			<li><%= link_to "SIGN UP", signin_path %>
+			<li><%= link_to "HELP", help_path %>
+		<ul>
+	
+	</nav>
+	<% logo = image_tag('logo.png', :alt=>"logo for sample app",:class=>'round logo')%>
+	<%= link_to logo, root_path , :class=>'logo'%>
+	<br class='clear'/>
+	</header>
