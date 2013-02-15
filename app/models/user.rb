@@ -12,16 +12,17 @@ class User < ActiveRecord::Base
                     :uniqueness =>{:case_sensitive => false}
                     )
                     
-  validate(:password, :presence => true,
-                      :confirmation => true,
-                      :length =>{ :within => 6..40}
-                      )
+  validate :password, :presence => true,
+                      :length =>{ :within => 6..40},
+                      :confirmation => true
+  validates_confirmation_of :password,  :message => 'Correct Password'
+
                       
   before_save :encrypt_password
   
   
   def has_password?(submitted_password)
-    self.encrypted_password == encrypt(submitted_password)
+    self.encripted_password == encrypt(submitted_password)
     
   end
   
@@ -35,12 +36,11 @@ class User < ActiveRecord::Base
   private
   def encrypt_password
     self.salt = make_salt if new_record?
-    self.encrypted_password = encrypt(password)
+    self.encripted_password = encrypt(password)
   end
   
   def encrypt(string)
     secure_hash("#{salt}--#{string}")
-    
   end
   
   def make_salt
